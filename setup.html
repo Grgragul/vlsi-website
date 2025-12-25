@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Setup & Downloads | VLSI From Zero</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <h1>VLSI From Zero</h1>
+  <span class="menu-icon" onclick="openMenu()">☰</span>
+</header>
+
+<!-- ================= SIDEBAR MENU ================= -->
+<div id="menu" class="sidebar">
+  <span class="close-btn" onclick="closeMenu()">&times;</span>
+  <a href="index.html">Home</a>
+  <a href="start-here.html">Start Here</a>
+  <a href="setup.html">Setup & Downloads</a>
+  <a href="verilog-basics.html">Verilog Basics</a>
+  <a href="career.html">Career Path</a>
+  <a href="about.html">About</a>
+</div>
+
+<!-- ================= MAIN CONTENT ================= -->
+<div class="main">
+
+  <!-- DOWNLOAD SECTION -->
+  <section class="card download-highlight">
+
+    <h2>Setup & Reference Downloads</h2>
+  
+    <p>
+      This website focuses on explaining concepts step by step.
+      However, some learners prefer a complete end-to-end reference
+      document that can be downloaded and reused for any RTL design.
+    </p>
+  
+    <p>
+      The document below provides a <b>pure ASIC-style RTL workflow</b>,
+      using only free and industry-relevant tools. It can be followed
+      for <b>any Verilog design</b> — from simple gates to larger blocks.
+    </p>
+  
+    <div class="download-box">
+      <a href="assets/documents/steps from first.docx" download>
+        📄 ASIC-Style RTL Workflow – From RTL to Netlist
+      </a>
+  
+      <small>
+        Includes tools, commands, Verilog examples, waveform viewing,
+        and synthesis flow (WSL + Ubuntu + Icarus + GTKWave + Yosys)
+      </small>
+    </div>
+  
+  </section>
+  
+
+  <!-- SYSTEM REQUIREMENTS -->
+  <section class="card">
+    <h3>System Requirements</h3>
+    <ul>
+      <li>Windows 10 or Windows 11 (recommended)</li>
+      <li>Minimum 8 GB RAM (4 GB may work, slower)</li>
+      <li>Stable internet connection</li>
+      <li>Basic computer usage knowledge</li>
+    </ul>
+  </section>
+
+  <!-- WHY LINUX TOOLS -->
+  <section class="card">
+    <h3>Why Linux Tools on Windows?</h3>
+    <p>
+      Most VLSI and ASIC tools are designed to run on Linux systems.
+      Instead of installing a separate Linux OS, we use
+      <b>WSL (Windows Subsystem for Linux)</b>.
+    </p>
+    <p>
+      WSL allows you to run Linux tools directly inside Windows
+      safely and efficiently.
+    </p>
+  </section>
+
+  <!-- INSTALL WSL -->
+  <section class="card">
+    <h3>Step 1: Install WSL (Ubuntu)</h3>
+    <p>
+      Open <b>PowerShell</b> as Administrator and run:
+    </p>
+    <pre>
+wsl --install
+    </pre>
+    <p>
+      Restart your system when prompted.
+      After restart, Ubuntu will open and ask you to create a username and password.
+    </p>
+  </section>
+
+  <!-- UPDATE UBUNTU -->
+  <section class="card">
+    <h3>Step 2: Update Ubuntu</h3>
+    <p>
+      After Ubuntu opens, run the following commands:
+    </p>
+    <pre>
+sudo apt update
+sudo apt upgrade -y
+    </pre>
+  </section>
+
+  <!-- INSTALL TOOLS -->
+  <section class="card">
+    <h3>Step 3: Install Required Tools</h3>
+    <p>
+      Install the tools used throughout this website:
+    </p>
+    <pre>
+sudo apt install iverilog gtkwave verilator yosys -y
+    </pre>
+    <p>
+      These tools are used for simulation, waveform viewing,
+      lint checking, and synthesis.
+    </p>
+  </section>
+
+  <!-- CODE EDITOR -->
+  <section class="card">
+    <h3>Step 4: Install a Code Editor</h3>
+    <p>
+      We recommend <b>Visual Studio Code</b> for editing Verilog and HTML files.
+      It is free and widely used in the industry.
+    </p>
+    <ul>
+      <li>Download from the official website</li>
+      <li>Use it to write Verilog, testbenches, and website files</li>
+    </ul>
+  </section>
+
+  <!-- FOLDER STRUCTURE -->
+  <section class="card">
+    <h3>Recommended Practice Folder Structure</h3>
+    <p>
+      Create a folder anywhere on your system to practice Verilog:
+    </p>
+    <pre>
+vlsi_practice/
+├── rtl/
+├── tb/
+└── output/
+    </pre>
+    <p>
+      Keeping files organized will help as designs grow.
+    </p>
+  </section>
+
+  <!-- NEXT STEP -->
+  <section class="card" style="text-align:center;">
+    <h3>Setup Complete ✅</h3>
+    <p>
+      You are now ready to write and run your first Verilog design.
+    </p>
+    <a href="verilog-basics.html" class="btn primary">
+      Go to Verilog Basics
+    </a>
+  </section>
+
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <b>Disclaimer:</b> This website is created for self-learning and educational
+  guidance only. It does not offer paid courses, internships,
+  certifications, or job guarantees.
+</footer>
+
+<script src="js/menu.js"></script>
+</body>
+</html>

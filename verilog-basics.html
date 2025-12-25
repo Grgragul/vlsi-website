@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verilog Basics | VLSI From Zero</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <h1>VLSI From Zero</h1>
+  <span class="menu-icon" onclick="openMenu()">☰</span>
+</header>
+
+<!-- SIDEBAR -->
+<div id="menu" class="sidebar">
+  <span class="close-btn" onclick="closeMenu()">&times;</span>
+  <a href="index.html">Home</a>
+  <a href="start-here.html">Start Here</a>
+  <a href="setup.html">Setup & Downloads</a>
+  <a href="verilog-basics.html">Verilog Basics</a>
+  <a href="career.html">Career Path</a>
+  <a href="about.html">About</a>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main">
+
+  <!-- INTRO -->
+  <section class="card">
+    <h2>Verilog Basics</h2>
+    <p>
+      This page introduces Verilog HDL through a very simple and
+      practical example. You will write your first Verilog module,
+      simulate it, and verify its behavior.
+    </p>
+    <p>
+      Do not rush. Understanding this page properly will make
+      everything else easier.
+    </p>
+  </section>
+
+  <!-- WHAT IS VERILOG -->
+  <section class="card">
+    <h3 class="step-title">What is Verilog?</h3>
+    <p>
+      Verilog is a <b>Hardware Description Language (HDL)</b> used to
+      describe digital circuits. Unlike C or Python, Verilog describes
+      hardware behavior and structure.
+    </p>
+    <p>
+      Engineers use Verilog to design logic such as gates, multiplexers,
+      registers, ALUs, and complete processors.
+    </p>
+  </section>
+
+  <!-- AND GATE -->
+  <section class="card">
+    <h3 class="step-title">Step 1: Write Your First Verilog Design (AND Gate)</h3>
+    <p>
+      Create a file named <b>and_gate.v</b> and write the following code:
+    </p>
+
+    <div class="code-block">
+<pre>
+module and_gate(
+  input a,
+  input b,
+  output y
+);
+  assign y = a & b;
+endmodule
+</pre>
+    </div>
+
+    <div class="note">
+      This is a purely combinational design.
+      The output <b>y</b> is HIGH only when both inputs are HIGH.
+    </div>
+  </section>
+
+  <!-- TESTBENCH -->
+  <section class="card">
+    <h3 class="step-title">Step 2: Write a Testbench</h3>
+    <p>
+      The testbench applies different inputs to your design and
+      generates a waveform.
+    </p>
+
+    <div class="code-block">
+<pre>
+module and_gate_tb;
+  reg a, b;
+  wire y;
+
+  and_gate uut(.a(a), .b(b), .y(y));
+
+  initial begin
+    $dumpfile("and_gate.vcd");
+    $dumpvars(0, and_gate_tb);
+
+    a = 0; b = 0;
+    #10 a = 0; b = 1;
+    #10 a = 1; b = 0;
+    #10 a = 1; b = 1;
+    #10 $finish;
+  end
+endmodule
+</pre>
+    </div>
+  </section>
+
+  <!-- RUN COMMANDS -->
+  <section class="card">
+    <h3 class="step-title">Step 3: Run Simulation</h3>
+    <p>Open WSL terminal and go to your project folder:</p>
+
+    <div class="code-block">
+<pre>
+iverilog -o and_gate_tb.vvp and_gate.v and_gate_tb.v
+vvp and_gate_tb.vvp
+gtkwave and_gate.vcd
+</pre>
+    </div>
+
+    <p>
+      GTKWave will open. Add signals <b>a</b>, <b>b</b>, and <b>y</b>
+      to the waveform window.
+    </p>
+  </section>
+
+  <!-- SUCCESS -->
+  <section class="card success-box">
+    <h3>Success ✅</h3>
+    <p>
+      If the waveform shows <b>y = a & b</b>, you have successfully
+      written and simulated your first Verilog design.
+    </p>
+    <p>
+      This is the same fundamental process used in real VLSI projects.
+    </p>
+  </section>
+
+  <!-- NEXT -->
+  <section class="card" style="text-align:center;">
+    <h3>What’s Next?</h3>
+    <p>
+      Next, we will explore more Verilog concepts and begin moving
+      toward synthesis and real ASIC-style flow.
+    </p>
+    <a href="career.html" class="btn primary">
+      Continue Learning
+    </a>
+  </section>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <b>Disclaimer:</b> This website is for educational purposes only.
+  It does not provide paid courses, internships, or job guarantees.
+</footer>
+
+<script src="js/menu.js"></script>
+</body>
+</html>
