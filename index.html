@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-
   <!-- Basic Meta -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,11 +9,10 @@
   <title>VLSI From Zero | Learn Verilog & ASIC Design Step by Step</title>
 
   <!-- SEO -->
-  <meta name="description" content="VLSI From Zero is a beginner-friendly platform for ECE students to learn VLSI fundamentals, Verilog, RTL design, and ASIC flow step by step.">
-  <meta name="keywords" content="VLSI from zero, VLSI basics, Verilog tutorial, ASIC flow, RTL design">
+  <meta name="description" content="VLSI From Zero is a beginner-friendly platform to learn VLSI, Verilog, and ASIC design flow using free open-source tools. Built for ECE students starting from scratch.">
+  <meta name="keywords" content="VLSI basics, Verilog tutorial, ASIC flow, RTL design, VLSI for beginners">
   <meta name="author" content="VLSI From Zero">
   <meta name="robots" content="index, follow">
-  <meta name="google-site-verification" content="0nKcUpvKF8BnDmLqA32jXTgYIG7spv9BQ4cef5PNzos">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
@@ -25,6 +21,9 @@
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary">
+
+  <!-- Canonical for SEO -->
+  <link rel="canonical" href="https://grgragul.github.io/vlsi-from-zero/">
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
@@ -41,13 +40,12 @@
 <!-- SIDEBAR MENU -->
 <div id="menu" class="sidebar">
   <span class="close-btn" onclick="closeMenu()">&times;</span>
-  <a href="index.html">Home</a>
-  <a href="start-here.html">Start Here</a>
-  <a href="setup.html">Setup & Tools</a>
-  <a href="downloads.html">Downloads</a>
-  <a href="verilog-basics.html">Verilog Basics</a>
-  <a href="career.html">Career Path</a>
-  <a href="about.html">About</a>
+  <a href="./">Home</a>
+  <a href="./start-here.html">Start Here</a>
+  <a href="./setup.html">Setup & Downloads</a>
+  <a href="./verilog-basics.html">Verilog Basics</a>
+  <a href="./career.html">Career Path</a>
+  <a href="./about.html">About</a>
 </div>
 
 <!-- MAIN CONTENT -->
@@ -57,85 +55,150 @@
   <section class="hero">
     <h2>Learn VLSI From Zero</h2>
     <p>
-      A clear and beginner-friendly roadmap to understand
+      A beginner-friendly learning platform to understand
       <b>VLSI, Verilog, and ASIC design flow</b>
       using free and industry-relevant tools.
     </p>
-
     <div class="hero-buttons">
-      <a href="start-here.html" class="btn primary">Start Learning</a>
-      <a href="setup.html" class="btn secondary">Setup & Tools</a>
+      <a href="./start-here.html" class="btn primary">Start Learning</a>
+      <a href="./setup.html" class="btn secondary">Setup & Downloads</a>
     </div>
+  </section>
+
+  <!-- WHAT IS VLSI -->
+  <section class="card">
+    <h3>What is VLSI?</h3>
+    <p>
+      <b>VLSI (Very Large Scale Integration)</b> is the process of
+      designing millions (or billions) of transistors on a single chip.
+      These chips power everything from mobile phones and laptops
+      to cars and satellites.
+    </p>
+    <p>
+      VLSI combines concepts from <b>electronics, digital logic,
+      computer architecture, and programming</b>.
+      Verilog is used to describe how hardware should behave.
+    </p>
   </section>
 
   <!-- WHO THIS IS FOR -->
   <section class="card">
-    <h3>Who Is This Website For?</h3>
+    <h3>Who is this website for?</h3>
     <ul>
       <li>ECE students new to VLSI</li>
-      <li>Beginners confused about tools and design flow</li>
-      <li>Students learning Verilog practically</li>
-      <li>Self-learners without paid EDA tools</li>
+      <li>Students confused about tools and design flow</li>
+      <li>Beginners learning Verilog practically</li>
+      <li>Anyone without access to paid EDA tools</li>
     </ul>
   </section>
 
   <!-- WHAT YOU WILL LEARN -->
   <section class="card">
-    <h3>What Will You Learn?</h3>
+    <h3>What will you learn here?</h3>
     <ul>
-      <li>VLSI fundamentals</li>
-      <li>Verilog RTL coding</li>
+      <li>Verilog basics and RTL design</li>
       <li>Simulation and waveform debugging</li>
-      <li>Synthesis and ASIC-style flow</li>
+      <li>Synthesis and netlist generation</li>
+      <li>How real ASIC-style VLSI flow works</li>
     </ul>
   </section>
 
-  <!-- DIFFERENTIATOR -->
+  <!-- LEARNING STRUCTURE -->
   <section class="card">
-    <h3>Why VLSI From Zero?</h3>
+    <h3>How Learning is Structured</h3>
     <p>
-      This platform focuses on <b>clarity over complexity</b>.
-      No paid courses. No shortcuts.
-      Just fundamentals, real flow, and honest guidance.
+      Content on this website follows a logical order:
     </p>
+    <ul>
+      <li>Understand fundamentals first</li>
+      <li>Write small, clear Verilog modules</li>
+      <li>Simulate and debug step by step</li>
+      <li>Gradually move towards synthesis concepts</li>
+    </ul>
+    <p>
+      You are encouraged to learn slowly and correctly.
+    </p>
+  </section>
+
+  <!-- FRONTEND BACKEND PREVIEW -->
+  <section class="card">
+    <h3>Frontend & Backend – A Quick Preview</h3>
+    <p>
+      VLSI broadly has two sides:
+    </p>
+    <ul>
+      <li><b>Frontend:</b> RTL design, Verilog, simulation, verification</li>
+      <li><b>Backend:</b> Timing, layout, physical design</li>
+    </ul>
+    <p>
+      Beginners should focus on frontend fundamentals first.
+      Backend concepts are easier once logic understanding is strong.
+    </p>
+    <a href="./career.html" class="btn secondary">
+      Explore Career Paths
+    </a>
+  </section>
+
+  <!-- COMMON MISTAKES -->
+  <section class="card warning-box">
+    <h3>Common Beginner Mistakes</h3>
+    <ul>
+      <li>Jumping directly to tools without understanding logic</li>
+      <li>Memorizing syntax without simulation</li>
+      <li>Rushing into backend without frontend clarity</li>
+      <li>Comparing learning speed with others</li>
+    </ul>
+    <p>
+      This website helps you avoid these mistakes.
+    </p>
+  </section>
+
+  <!-- HOW TO USE -->
+  <section class="card">
+    <h3>How to Use This Website</h3>
+    <ol>
+      <li>Start with the <b>Start Here</b> page</li>
+      <li>Install tools using <b>Setup & Downloads</b></li>
+      <li>Practice Verilog from <b>Verilog Basics</b></li>
+      <li>Explore roles from <b>Career Path</b></li>
+    </ol>
   </section>
 
   <!-- FEATURE CARDS -->
   <div class="cards">
     <div class="card">
       <h3>Understand VLSI Basics</h3>
-      <p>Learn how chips are designed and where Verilog fits.</p>
+      <p>
+        Learn how chips are designed and
+        where Verilog fits in the flow.
+      </p>
     </div>
 
     <div class="card">
-      <h3>Write & Simulate Verilog</h3>
-      <p>Practice Verilog using Icarus Verilog and GTKWave.</p>
+      <h3>Write & Run Verilog</h3>
+      <p>
+        Simulate Verilog using Icarus Verilog
+        and analyze waveforms in GTKWave.
+      </p>
     </div>
 
     <div class="card">
       <h3>ASIC-Style Flow</h3>
-      <p>RTL → Simulation → Synthesis → Netlist using open tools.</p>
+      <p>
+        Practice RTL → Simulation → Synthesis
+        using open-source tools.
+      </p>
     </div>
   </div>
-
-  <!-- CTA -->
-  <section class="card" style="text-align:center;">
-    <h3>Start Your VLSI Journey</h3>
-    <p>
-      If you are a beginner, start from the basics and follow the flow.
-    </p>
-    <a href="start-here.html" class="btn primary">Go to Start Here</a>
-  </section>
 
 </div>
 
 <!-- FOOTER -->
 <footer>
-  <b>Disclaimer:</b> Educational content only.
+  <b>Disclaimer:</b> Educational guidance only.
   No paid courses, internships, certifications, or job guarantees.
 </footer>
 
-<!-- MENU SCRIPT -->
 <script src="js/menu.js"></script>
 
 </body>
